@@ -27,7 +27,7 @@ namespace HouseRentingSystem.Services.Users
             var user = this.data.Users.Find(userId);
 
             if (string.IsNullOrEmpty(user.FirstName) 
-                || string.IsNullOrEmpty(user.LastName))
+                && string.IsNullOrEmpty(user.LastName))
             {
                 return null;
             }
